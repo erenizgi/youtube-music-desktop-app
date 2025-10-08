@@ -1,0 +1,37 @@
+{
+  "name": "youtube-music-desktop-app",
+  "version": "1.0.0",
+  "main": "app.js",
+  "build": {
+    "appId": "com.kankalara.ytmusic",
+    "productName": "YouTube Music",
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": [
+        "portable"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ]
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "A desktop app for YouTube Music built with Electron.",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "electron-builder": "^26.0.12",
+    "electron-packager": "^17.1.2",
+    "electron": "^38.2.2"
+  }
+}
