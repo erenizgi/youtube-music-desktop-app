@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "build": {
-    "appId": "com.kankalara.ytmusic",
+    "appId": "com.youtubemusicdesktoppp.ytmusic",
     "productName": "YouTube Music",
     "files": [
       "**/*"
