@@ -3,14 +3,14 @@ const path = require('path');
 
 function createWindow() {
   Menu.setApplicationMenu(null);
-  app.setName("youtube-music");
+  app.setName("youtube-music-desktop-app");
   app.commandLine.appendSwitch('wm-class', 'youtube-music');
   const win = new BrowserWindow({
     width: 1200,
     height: 800,
     title: 'YouTube Music',
     webPreferences: {
-      nodeIntegration: false,
+      nodeIntegration: true,
       contextIsolation: false,
       webSecurity: false
     },
@@ -20,7 +20,7 @@ function createWindow() {
   win.loadURL('https://music.youtube.com');
   const navigationMenu = Menu.buildFromTemplate([
     {
-      label: 'Geri',
+      label: '← Geri',
       click: () => {
         if (win.webContents.canGoBack()) {
           win.webContents.goBack();
@@ -28,7 +28,7 @@ function createWindow() {
       },
     },
     {
-      label: 'İleri',
+      label: 'İleri →',
       click: () => {
         if (win.webContents.canGoForward()) {
           win.webContents.goForward();
